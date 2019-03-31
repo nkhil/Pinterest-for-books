@@ -4,8 +4,6 @@ import styled, { css } from 'styled-components'
 const baseStyle = css`
   margin-bottom: ${props => props.noMargin && '0'};
   color: #202020;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
   margin-top: 0;
   text-align: ${props => {
     if (props.center) return 'center'
@@ -17,9 +15,9 @@ const baseStyle = css`
 `
 
 const HeadingOne = styled.h1`
-  font-size: 42px;
+  font-size: 50px;
   font-weight: bold;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   ${baseStyle};
 
   @media (max-width: 480px) {
