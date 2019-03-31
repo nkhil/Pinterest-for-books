@@ -12,9 +12,9 @@ class App extends Component {
     return (
       <Fragment>
         <GlobalStyles />
-        <Container style={{ backgroundColor: '#71CF00' }}>
+        <Container>
           <Flex column contentCenter alignCenter>
-            <h1>Hello World</h1>
+            <Heading>Hello World</Heading>
             <p>
               This is{' '}
               <A href="http://nikhilvijayan.com">a link I'd like to visit.</A> I
