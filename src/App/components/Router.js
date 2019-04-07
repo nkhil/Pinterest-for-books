@@ -6,6 +6,7 @@ const Router = () => (
   <BrowserRouter basename={'/'}>
     <Switch>
       <Route exact={true} path="/" component={App} />
+      <Route path="*" component={App} />
     </Switch>
   </BrowserRouter>
 )
