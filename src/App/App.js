@@ -32,7 +32,7 @@ class App extends Component {
     const bookIds = Object.keys(this.state.books)
     const displayBooks = bookIds.map(key => {
       const book = this.state.books[key]
-    return (
+      return (
         <li key={key}>
           <Flex column alignCenter>
             <img
@@ -50,49 +50,17 @@ class App extends Component {
       <Fragment>
         <GlobalStyles />
         <Container>
-          <Flex column contentCenter alignCenter>
-            <Heading>Hello World</Heading>
+          <Flex column>
+            <Heading>Pocket Lists</Heading>
+            <Heading h2>Nikhil's favourite books</Heading>
             <p>
-              This is{' '}
-              <A href="http://nikhilvijayan.com">a link I'd like to visit.</A> I
-              want to know what exactly is happening when a long sentence is
-              parsed in What you are about to see is real; the litigants on the
-              screen are not actors. They are genuine citizens who, having filed
-              their claims in a real small claims court, have been persuaded to
-              drop their suits there and have them settled here, in this
-              forum... the People's Court.
+              A list of my favourite science fiction books from the 70's and
+              80's.
             </p>
             <Form addBookToState={this.addBookToState} />
             <Flex contentBetween>{displayBooks}</Flex>
           </Flex>
         </Container>
-        <div>
-          <Container>
-            <Heading>Container</Heading>
-          </Container>
-          <Container>
-            <div style={{ backgroundColor: '#fff' }}>
-              <Heading h2>Default Container</Heading>
-              <p>
-                What you are about to see is real; the litigants on the screen
-                are not actors. They are genuine citizens who, having filed
-                their claims in a real small claims court, have been persuaded
-                to drop their suits there and have them settled here, in this
-                forum... the People's Court.
-              </p>
-            </div>
-          </Container>
-          <Container fullVertical style={{ backgroundColor: '#008BF8' }}>
-            <div style={{ height: 300, backgroundColor: '#5CB5FA' }}>
-              <Heading h2>Full Vertical Container</Heading>
-            </div>
-          </Container>
-          <Container full small style={{ backgroundColor: '#71CF00' }}>
-            <div style={{ height: 300, backgroundColor: '#D4FDA2' }}>
-              <Heading h2>Full Small Container</Heading>
-            </div>
-          </Container>
-        </div>
       </Fragment>
     )
   }
