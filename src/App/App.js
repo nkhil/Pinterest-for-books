@@ -4,6 +4,7 @@ import A from './components/elements/A'
 import Container from './components/elements/Container'
 import Flex from './components/elements/Flex'
 import Heading from './components/elements/Heading'
+import Form from './components/Form'
 import sampleBooks from '../sample_data/books'
 
 class App extends Component {
@@ -19,6 +20,14 @@ class App extends Component {
     const books = sampleBooks
     this.setState({ books })
   }
+
+  addBookToState = book => {
+    const books = { ...this.state.books }
+    books[`book${Date.now()}`] = book
+    this.setState({ books })
+    console.log(this.state.details)
+  }
+
   render() {
     return (
       <Fragment>
@@ -36,6 +45,7 @@ class App extends Component {
               drop their suits there and have them settled here, in this
               forum... the People's Court.
             </p>
+            <Form addBookToState={this.addBookToState} />
           </Flex>
         </Container>
         <div>
