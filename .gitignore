@@ -2,3 +2,4 @@ node_modules/
 dist/
 .cache/
 .DS*
+__tests__/__snapshots__
