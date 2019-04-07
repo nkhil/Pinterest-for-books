@@ -25,7 +25,6 @@ class App extends Component {
     const books = { ...this.state.books }
     books[`book${Date.now()}`] = book
     this.setState({ books })
-    console.log(this.state.details)
   }
 
   render() {
