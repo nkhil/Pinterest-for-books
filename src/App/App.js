@@ -29,6 +29,23 @@ class App extends Component {
   }
 
   render() {
+    const bookIds = Object.keys(this.state.books)
+    const displayBooks = bookIds.map(key => {
+      const book = this.state.books[key]
+    return (
+        <li key={key}>
+          <Flex column alignCenter>
+            <img
+              src={book.bookUrl}
+              alt={book.bookName}
+              width="200px"
+              height="300px"
+            />
+            <Heading h5>{book.bookName}</Heading>
+          </Flex>
+        </li>
+      )
+    })
     return (
       <Fragment>
         <GlobalStyles />
@@ -46,6 +63,7 @@ class App extends Component {
               forum... the People's Court.
             </p>
             <Form addBookToState={this.addBookToState} />
+            <Flex contentBetween>{displayBooks}</Flex>
           </Flex>
         </Container>
         <div>
