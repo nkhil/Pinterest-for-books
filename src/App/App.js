@@ -4,10 +4,21 @@ import A from './components/elements/A'
 import Container from './components/elements/Container'
 import Flex from './components/elements/Flex'
 import Heading from './components/elements/Heading'
+import sampleBooks from '../sample_data/books'
 
 class App extends Component {
-  state = {}
+  state = {
+    books: {},
+  }
 
+  componentWillMount() {
+    this.loadSampleBooks()
+  }
+
+  loadSampleBooks = () => {
+    const books = sampleBooks
+    this.setState({ books })
+  }
   render() {
     return (
       <Fragment>
