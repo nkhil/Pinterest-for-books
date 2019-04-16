@@ -4,6 +4,8 @@ An easy to use website to share books and podcasts they love (kind of like a cur
 
 [Visit the app in development →](http://nikhilvijayan.com/pocketlists/)
 
+[![pocketlists.jpg](https://i.postimg.cc/tJ7WBm6j/pocketlists.jpg)](https://postimg.cc/gLFxJs4S)
+
 **Objective**
 
 Allow users to curate and share a list of books they love in a visual way.
